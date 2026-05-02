@@ -1,1 +1,344 @@
-hola 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clases de manejo particulares en Buenos Aires. Instructor independiente con paciencia, flexibilidad y enfoque personalizado. Contactá por WhatsApp." />
+  <title>condu.ciendo | Clases de Manejo en Buenos Aires</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">condu<span>.ciendo</span></a>
+      <nav class="navbar__links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#diferenciales">Diferenciales</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto" class="btn btn--sm">Contactar</a>
+      </nav>
+      <button class="navbar__burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="navbar__mobile" id="mobileMenu">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#diferenciales">Diferenciales</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto" class="btn btn--outline">Contactar por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="badge">📍 Ciudad Autónoma de Buenos Aires</span>
+        <h1 class="hero__title">Aprendé a manejar con <span class="highlight">confianza</span> en Buenos Aires</h1>
+        <p class="hero__subtitle">
+          Clases particulares de manejo con un instructor independiente. Enseñanza personalizada, a tu ritmo, con paciencia y enfoque en tu seguridad desde el primer día.
+        </p>
+        <div class="hero__actions">
+          <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20clases%20de%20manejo%20%F0%9F%9A%97" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.882a.5.5 0 0 0 .606.61l6.198-1.63A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.031-1.384l-.36-.214-3.733.982.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="#servicios" class="btn btn--ghost btn--lg">Ver servicios</a>
+        </div>
+        <div class="hero__trust">
+          <div class="trust-item">
+            <span class="trust-icon">✅</span>
+            <span>Instructor independiente</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🕐</span>
+            <span>Horarios flexibles</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">📍</span>
+            <span>Clases en CABA</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__illustration">
+          <div class="car-scene">
+            <div class="road"></div>
+            <div class="car">
+              <div class="car__body">
+                <div class="car__window car__window--front"></div>
+                <div class="car__window car__window--rear"></div>
+              </div>
+              <div class="car__wheel car__wheel--front"></div>
+              <div class="car__wheel car__wheel--rear"></div>
+              <div class="car__headlight"></div>
+              <div class="car__taillight"></div>
+            </div>
+            <div class="road__lines">
+              <div class="road__line"></div>
+              <div class="road__line"></div>
+              <div class="road__line"></div>
+            </div>
+          </div>
+          <div class="hero__badge-float hero__badge-float--1">
+            <span>⭐</span> 5 estrellas
+          </div>
+          <div class="hero__badge-float hero__badge-float--2">
+            <span>🎓</span> +100 alumnos
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8fafc"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MÍ ===== -->
+  <section class="section sobre-mi" id="sobre-mi">
+    <div class="container sobre-mi__inner">
+      <div class="sobre-mi__avatar" aria-hidden="true">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <circle cx="60" cy="60" r="60" fill="#e0f0ff"/>
+            <circle cx="60" cy="45" r="20" fill="#3b82f6"/>
+            <ellipse cx="60" cy="95" rx="30" ry="20" fill="#3b82f6"/>
+          </svg>
+        </div>
+        <div class="avatar-badge">🚗 Instructor</div>
+      </div>
+      <div class="sobre-mi__content">
+        <span class="section-label">Sobre mí</span>
+        <h2 class="section-title">Un instructor que entiende <span class="highlight">tu proceso</span></h2>
+        <p>
+          Soy instructor de manejo independiente con años de experiencia enseñando en las calles de Buenos Aires. Me especializo en acompañar a personas que arrancan desde cero o que necesitan recuperar la confianza al volante.
+        </p>
+        <p>
+          Mi enfoque es simple: cada alumno aprende diferente. Por eso adapto cada clase a tu ritmo, sin presiones y con mucha paciencia. Mi objetivo no es solo que apruebes el examen, sino que salgas a manejar solo con seguridad real.
+        </p>
+        <p>
+          Elegí ser instructor independiente porque me permite darte una atención que las autoescuelas masivas no pueden: tiempo, dedicación y un vínculo de confianza genuino.
+        </p>
+        <div class="sobre-mi__values">
+          <div class="value-chip">🤝 Paciencia</div>
+          <div class="value-chip">🎯 Personalización</div>
+          <div class="value-chip">🛡️ Seguridad</div>
+          <div class="value-chip">💪 Confianza</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Qué ofrezco</span>
+        <h2 class="section-title">Clases diseñadas <span class="highlight">para vos</span></h2>
+        <p class="section-subtitle">Cada servicio está pensado para un momento distinto de tu aprendizaje.</p>
+      </div>
+      <div class="servicios__grid">
+
+        <div class="service-card">
+          <div class="service-card__icon">🚦</div>
+          <h3>Clases para principiantes</h3>
+          <p>Empezás desde cero sin problema. Te enseño todo: desde cómo arrancar el auto hasta circular con seguridad en la ciudad.</p>
+          <ul class="service-card__list">
+            <li>Manejo del vehículo desde lo básico</li>
+            <li>Señales de tránsito y normas viales</li>
+            <li>Circulación en calles y avenidas de CABA</li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--featured">
+          <div class="service-card__badge">Más solicitado</div>
+          <div class="service-card__icon">💙</div>
+          <h3>Clases para personas con miedo</h3>
+          <p>Si el miedo o la ansiedad te frenaron antes, acá encontrás el espacio seguro para superarlo a tu ritmo.</p>
+          <ul class="service-card__list">
+            <li>Ritmo completamente adaptado a vos</li>
+            <li>Técnicas para manejar la ansiedad al volante</li>
+            <li>Progresión gradual y sin presiones</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">📋</div>
+          <h3>Preparación para el examen</h3>
+          <p>¿Tenés el examen práctico cerca? Te preparo específicamente para rendir con confianza y aprobar.</p>
+          <ul class="service-card__list">
+            <li>Simulacros del examen práctico</li>
+            <li>Recorridos habituales de evaluación</li>
+            <li>Corrección de errores frecuentes</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">🗺️</div>
+          <h3>Clases personalizadas en CABA</h3>
+          <p>Clases en las zonas que más necesitás: tu barrio, tu trabajo, rutas que usás a diario.</p>
+          <ul class="service-card__list">
+            <li>Recorridos en tu zona de interés</li>
+            <li>Autopistas, rotondas y zonas complejas</li>
+            <li>Estacionamiento y maniobras urbanas</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="section-cta">
+        <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20clases%20de%20manejo%20%F0%9F%9A%97" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          Consultar disponibilidad por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIALES ===== -->
+  <section class="section diferenciales" id="diferenciales">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Por qué elegirme</span>
+        <h2 class="section-title">Lo que me hace <span class="highlight">diferente</span></h2>
+      </div>
+      <div class="diferenciales__grid">
+        <div class="diferencial-item">
+          <div class="diferencial-item__icon">👤</div>
+          <h3>Trato 100% personalizado</h3>
+          <p>No sos un número. Cada clase se adapta a tu nivel, tu ritmo y tus objetivos específicos.</p>
+        </div>
+        <div class="diferencial-item">
+          <div class="diferencial-item__icon">🕐</div>
+          <h3>Horarios flexibles</h3>
+          <p>Coordinamos el horario que mejor te quede: mañana, tarde o noche, de lunes a domingo.</p>
+        </div>
+        <div class="diferencial-item">
+          <div class="diferencial-item__icon">🏙️</div>
+          <h3>Zonas reales de manejo</h3>
+          <p>Practicás en las calles de CABA donde vas a manejar de verdad, no en circuitos cerrados.</p>
+        </div>
+        <div class="diferencial-item">
+          <div class="diferencial-item__icon">🚀</div>
+          <h3>Práctico desde el día uno</h3>
+          <p>Desde la primera clase estás al volante. Aprender haciendo es la forma más efectiva.</p>
+        </div>
+        <div class="diferencial-item">
+          <div class="diferencial-item__icon">💬</div>
+          <h3>Comunicación directa</h3>
+          <p>Me contactás por WhatsApp y te respondo rápido. Sin formularios ni intermediarios.</p>
+        </div>
+        <div class="diferencial-item">
+          <div class="diferencial-item__icon">🛡️</div>
+          <h3>Seguridad ante todo</h3>
+          <p>Vehículo con doble comando. Tu seguridad y la de los demás es siempre la prioridad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section testimonios" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Testimonios</span>
+        <h2 class="section-title">Lo que dicen mis <span class="highlight">alumnos</span></h2>
+      </div>
+      <div class="testimonios__grid">
+
+        <div class="testimonio-card">
+          <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonio-card__text">
+            "Tenía mucho miedo de manejar después de un accidente. Con él recuperé la confianza de a poco, sin presiones. Hoy manejo sola todos los días. ¡Lo recomiendo a todos!"
+          </p>
+          <div class="testimonio-card__author">
+            <div class="testimonio-card__avatar" aria-hidden="true">V</div>
+            <div>
+              <strong>Valentina M.</strong>
+              <span>Palermo, CABA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card testimonio-card--featured">
+          <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonio-card__text">
+            "Empecé desde cero y en pocas clases ya me sentía cómodo en la ciudad. Tiene una paciencia increíble y explica todo muy claro. Aprobé el examen al primer intento."
+          </p>
+          <div class="testimonio-card__author">
+            <div class="testimonio-card__avatar" aria-hidden="true">L</div>
+            <div>
+              <strong>Lucas R.</strong>
+              <span>Caballito, CABA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
+          <p class="testimonio-card__text">
+            "Busqué instructor por recomendación y fue la mejor decisión. Los horarios flexibles me ayudaron un montón porque trabajo todo el día. Muy profesional y humano."
+          </p>
+          <div class="testimonio-card__author">
+            <div class="testimonio-card__avatar" aria-hidden="true">S</div>
+            <div>
+              <strong>Sofía G.</strong>
+              <span>Villa Urquiza, CABA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="section cta-final" id="contacto">
+    <div class="container cta-final__inner">
+      <div class="cta-final__content">
+        <span class="section-label section-label--light">¿Listo para empezar?</span>
+        <h2 class="cta-final__title">Empezá hoy a manejar <span class="highlight-light">con confianza</span></h2>
+        <p class="cta-final__subtitle">
+          Mandame un mensaje por WhatsApp y coordinamos tu primera clase. Sin compromiso, sin burocracia.
+        </p>
+        <a href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20clases%20de%20manejo%20%F0%9F%9A%97" target="_blank" rel="noopener" class="btn btn--white btn--xl">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.882a.5.5 0 0 0 .606.61l6.198-1.63A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.031-1.384l-.36-.214-3.733.982.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+          Escribirme por WhatsApp
+        </a>
+        <p class="cta-final__note">Respondo en menos de 1 hora · Lunes a domingo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="navbar__logo">condu<span>.ciendo</span></a>
+      <p>Clases de manejo particulares · Ciudad Autónoma de Buenos Aires</p>
+      <p class="footer__copy">© 2025 condu.ciendo · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOTANTE ===== -->
+  <a
+    href="https://wa.me/5491100000000?text=Hola%2C%20quiero%20consultar%20por%20clases%20de%20manejo%20%F0%9F%9A%97"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-float"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.882a.5.5 0 0 0 .606.61l6.198-1.63A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.031-1.384l-.36-.214-3.733.982.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+    <span class="whatsapp-float__tooltip">¡Escribime!</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
