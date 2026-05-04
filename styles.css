@@ -201,8 +201,17 @@ ul { list-style: none; }
   font-weight: 800;
   color: #fff;
   letter-spacing: -.02em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .navbar__logo span { color: var(--color-accent); }
+
+.navbar__car {
+  width: 42px;
+  height: 24px;
+  flex-shrink: 0;
+}
 
 .navbar__links {
   display: flex;
@@ -353,110 +362,52 @@ ul { list-style: none; }
   max-width: 420px;
 }
 
-.car-scene {
-  background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 40%, #374151 40%, #4b5563 100%);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  padding: 40px 30px 0;
-  min-height: 220px;
-  position: relative;
-  overflow: hidden;
+/* Hero illustration — SVG autónomo */
+.hero__scene-svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: block;
 }
 
-.road {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 60px;
-  background: #374151;
-}
-
-.road__lines {
-  position: absolute;
-  bottom: 22px;
-  left: 0; right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.road__line {
-  width: 40px;
-  height: 6px;
-  background: #fbbf24;
-  border-radius: 3px;
-  animation: roadMove 1.2s linear infinite;
-}
-.road__line:nth-child(2) { animation-delay: -.4s; }
-.road__line:nth-child(3) { animation-delay: -.8s; }
-
-@keyframes roadMove {
-  0%   { transform: translateX(60px); opacity: 1; }
-  100% { transform: translateX(-60px); opacity: .3; }
-}
-
-/* Simple CSS car */
-.car {
-  position: relative;
-  width: 160px;
-  margin: 0 auto 30px;
-  animation: carBounce 2s ease-in-out infinite;
+/* Auto: rebote suave */
+.hero__car-group {
+  animation: carBounce 2.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center bottom;
 }
 
 @keyframes carBounce {
-  0%, 100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Líneas de la calle: se mueven hacia la izquierda simulando movimiento */
+.road-lines-anim {
+  animation: roadScroll 1.4s linear infinite;
+}
+
+@keyframes roadScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-105px); }
+}
+
+/* Badges flotantes */
+.badge-float-1 {
+  animation: floatA 3s ease-in-out infinite;
+}
+.badge-float-2 {
+  animation: floatB 3.4s ease-in-out infinite;
+}
+
+@keyframes floatA {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-4px); }
-}
-
-.car__body {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  height: 52px;
-  border-radius: 12px 12px 4px 4px;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,.3);
-}
-
-.car__window {
-  position: absolute;
-  top: 8px;
-  background: rgba(186,230,253,.85);
-  border-radius: 6px;
-  height: 26px;
-}
-.car__window--front { left: 10px; width: 50px; }
-.car__window--rear  { right: 10px; width: 40px; }
-
-.car__wheel {
-  position: absolute;
-  bottom: -12px;
-  width: 28px; height: 28px;
-  background: #1e293b;
-  border-radius: 50%;
-  border: 4px solid #94a3b8;
-  animation: wheelSpin 0.8s linear infinite;
-}
-.car__wheel--front { right: 18px; }
-.car__wheel--rear  { left: 18px; }
-
-@keyframes wheelSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-.car__headlight {
-  position: absolute;
-  right: -6px; top: 18px;
-  width: 10px; height: 10px;
-  background: #fef08a;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #fef08a;
-}
-
-.car__taillight {
-  position: absolute;
-  left: -6px; top: 18px;
-  width: 8px; height: 8px;
-  background: #f87171;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #f87171;
 }
 
 /* Floating badges */
@@ -705,87 +656,170 @@ ul { list-style: none; }
 }
 
 /* =============================================
-   TESTIMONIOS
+   INSTAGRAM — tarjeta de perfil
    ============================================= */
-.testimonios { background: var(--color-white); }
+.instagram { background: var(--color-white); }
 
-.testimonios__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+.instagram__card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
 
-.testimonio-card {
-  background: var(--color-bg);
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.testimonio-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.testimonio-card--featured {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #1d4ed8 100%);
-  border-color: transparent;
-}
-
-.testimonio-card--featured .testimonio-card__text,
-.testimonio-card--featured .testimonio-card__author strong,
-.testimonio-card--featured .testimonio-card__author span { color: #fff; }
-
-.testimonio-card--featured .testimonio-card__stars { color: #fbbf24; }
-
-.testimonio-card__stars {
-  color: #f59e0b;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
-}
-
-.testimonio-card__text {
-  font-size: .95rem;
-  color: var(--color-text-muted);
-  font-style: italic;
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-
-.testimonio-card__author {
+/* Franja superior con logo IG */
+.instagram__topbar {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.testimonio-card__avatar {
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  background: var(--color-primary);
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.instagram__topbar svg {
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
 }
 
-.testimonio-card--featured .testimonio-card__avatar {
-  background: rgba(255,255,255,.25);
+/* Sección de perfil */
+.instagram__profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 24px 0;
 }
 
-.testimonio-card__author strong {
+/* Avatar circular con borde degradado IG */
+.instagram__avatar {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  box-shadow: var(--shadow-md);
+}
+
+.instagram__avatar svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: block;
-  font-size: .9rem;
-  color: var(--color-text);
 }
 
-.testimonio-card__author span {
-  font-size: .8rem;
-  color: var(--color-text-muted);
+.instagram__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.instagram__name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.instagram__handle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -.01em;
+}
+
+.instagram__category {
+  font-size: .82rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Stats — centradas bajo el nombre */
+.instagram__stats {
+  display: flex;
+  gap: 0;
+  margin-top: 12px;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 10px 0;
+}
+
+.ig-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0 8px;
+  border-right: 1px solid #f1f5f9;
+}
+
+.ig-stat:last-child { border-right: none; }
+
+.ig-stat strong {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.ig-stat span {
+  font-size: .72rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* Bio */
+.instagram__bio {
+  padding: 16px 24px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.instagram__bio p {
+  font-size: .92rem;
+  color: #1e293b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Botones */
+.instagram__actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px 24px 24px;
+}
+
+.instagram__actions .btn {
+  min-width: 220px;
+}
+
+.btn--instagram {
+  background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 14px rgba(225,48,108,.3);
+}
+.btn--instagram:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(225,48,108,.4);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .instagram__profile { gap: 16px; padding: 18px 16px 0; }
+  .instagram__avatar  { width: 72px; height: 72px; }
+  .instagram__handle  { font-size: 1rem; }
+  .instagram__stats   { gap: 12px; }
+  .ig-stat strong     { font-size: .88rem; }
+  .instagram__bio     { padding: 14px 16px 16px; }
+  .instagram__actions { padding: 16px 16px 20px; flex-direction: column; }
+  .instagram__actions .btn { width: 100%; flex: none; }
 }
 
 /* =============================================
@@ -921,52 +955,146 @@ ul { list-style: none; }
 .whatsapp-float:hover .whatsapp-float__tooltip { opacity: 1; }
 
 /* =============================================
-   RESPONSIVE
+   RESPONSIVE — Mobile First
+   Pensado para tráfico desde Instagram
    ============================================= */
+
+/* ---- Tablet (≤ 900px) ---- */
 @media (max-width: 900px) {
+  .navbar__links { display: none; }
+  .navbar__burger { display: flex; }
+
   .hero__inner {
     grid-template-columns: 1fr;
     text-align: center;
+    padding-bottom: 48px;
   }
-
-  .hero__subtitle { margin: 0 auto 32px; }
-
-  .hero__actions { justify-content: center; }
-
-  .hero__trust { justify-content: center; }
-
-  .hero__visual { display: none; }
+  .hero__subtitle { margin: 0 auto 32px; max-width: 100%; }
+  .hero__actions  { justify-content: center; }
+  .hero__trust    { justify-content: center; }
+  .hero__visual   { display: none; }
 
   .sobre-mi__inner {
     grid-template-columns: 1fr;
+    gap: 36px;
     text-align: center;
   }
-
   .sobre-mi__values { justify-content: center; }
-
-  .navbar__links { display: none; }
-
-  .navbar__burger { display: flex; }
 }
 
+/* ---- Mobile (≤ 600px) ---- */
 @media (max-width: 600px) {
-  .section { padding: 60px 0; }
 
-  .hero { padding-top: 100px; }
+  /* Base */
+  .container { padding: 0 16px; }
+  .section    { padding: 56px 0; }
 
-  .hero__title { font-size: 1.9rem; }
+  /* Navbar */
+  .navbar__inner { height: 58px; }
+  .navbar__logo  { font-size: 1.15rem; }
 
-  .hero__actions { flex-direction: column; align-items: center; }
+  /* Hero */
+  .hero { padding-top: 90px; }
 
-  .btn--lg { width: 100%; max-width: 320px; }
+  .hero__title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
 
+  .hero__subtitle {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  .badge { font-size: .75rem; }
+
+  /* Botones apilados y full-width en mobile */
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: .97rem;
+    padding: 15px 20px;
+  }
+
+  /* Trust items en columna */
+  .hero__trust {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Sección sobre mí */
+  .avatar-circle { width: 150px; height: 150px; }
+
+  .sobre-mi__content p { font-size: .95rem; }
+
+  .value-chip { font-size: .8rem; padding: 5px 13px; }
+
+  /* Títulos de sección */
+  .section-title  { font-size: 1.6rem; }
+  .section-header { margin-bottom: 36px; }
+  .section-subtitle { font-size: .95rem; }
+
+  /* Grillas → 1 columna */
   .servicios__grid,
   .diferenciales__grid,
-  .testimonios__grid { grid-template-columns: 1fr; }
+  .testimonios__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 
-  .cta-final { padding: 70px 0; }
+  /* Cards más compactas */
+  .service-card,
+  .diferencial-item,
+  .testimonio-card {
+    padding: 22px 18px;
+  }
 
-  .btn--xl { width: 100%; max-width: 320px; }
+  /* Badge "Más solicitado" no se corta */
+  .service-card__badge {
+    font-size: .7rem;
+    padding: 3px 12px;
+  }
 
-  .whatsapp-float { bottom: 20px; right: 20px; width: 54px; height: 54px; }
+  /* CTA final */
+  .cta-final { padding: 64px 0; }
+
+  .cta-final__title    { font-size: 1.6rem; }
+  .cta-final__subtitle { font-size: .95rem; }
+
+  .cta-final .btn--xl {
+    width: 100%;
+    font-size: 1rem;
+    padding: 16px 20px;
+  }
+
+  /* Botón WhatsApp flotante más pequeño */
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+  /* Ocultar tooltip en touch */
+  .whatsapp-float__tooltip { display: none; }
+
+  /* Wave del hero más chica */
+  .hero__wave svg { height: 48px; }
+}
+
+/* ---- Mobile chico (≤ 380px — iPhone SE, etc.) ---- */
+@media (max-width: 380px) {
+  .hero__title   { font-size: 1.5rem; }
+  .section-title { font-size: 1.4rem; }
+
+  .hero__actions .btn { font-size: .9rem; padding: 14px 16px; }
+
+  .service-card,
+  .diferencial-item,
+  .testimonio-card { padding: 18px 14px; }
 }
